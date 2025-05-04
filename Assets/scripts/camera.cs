@@ -1,9 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class camera : MonoBehaviour
 {
+
+
+
     [SerializeField] private Collider2D[] myHits;
 
     [SerializeField] private LayerMask cityBlockLayerMask;
@@ -66,7 +69,7 @@ public class camera : MonoBehaviour
                 if(snapTo != null)
                 {
                     Vector3 snapPos = snapTo.transform.position;
-                    Vector3 lerpPos = Vector3.Lerp(_dragged.transform.position, snapPos, 0.01f);
+                    Vector3 lerpPos = QuadraticEaseIn(_dragged.transform.position, snapPos, 0.01f);
                     _dragged.transform.position = new Vector3(lerpPos.x, lerpPos.y, _dragged.transform.position.z);
 
 
@@ -144,6 +147,15 @@ public class camera : MonoBehaviour
 
 
         
+    }
+
+    public static Vector3 QuadraticEaseIn(Vector3 start, Vector3 end, float t)
+    {
+
+        float dist = (start - end).magnitude;
+        dist = Mathf.Clamp(dist, 0, 1.1f);
+        return Vector3.Lerp(start, end, t * 1/(dist*dist));
+        // or: return start + (end - start) * quad;
     }
 
     private void SelectObject(GameObject selected)
