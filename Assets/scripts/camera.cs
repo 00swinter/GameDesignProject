@@ -15,12 +15,9 @@ public class camera : MonoBehaviour
 
     [SerializeField] private bool allowControl = true;
 
-    [SerializeField] private Vector2 cameraVelocity;
-    [SerializeField] private float cameraZoom;
-
-
     private Camera _cam;
     private GameObject _dragged;
+    private Quaternion _draggedRotation;
     private Vector3 _offset;
 
     [SerializeField] private GameObject snapTo = null;
@@ -35,10 +32,22 @@ public class camera : MonoBehaviour
     public void deselectCityBlock()
     {
         selectedCityBlock = null;
+        allowControl = false;
     }
 
     void Update()
     {
+
+        //select what camera settings to use
+        if (selectedCityBlock != null)
+        {
+            currentCameraSettings = selectedCityBlock.GetComponent<cameraSettings>();
+        }
+        else
+        {
+            currentCameraSettings = this.GetComponent<cameraSettings>();
+        }
+
         if (allowControl)
         {
             //player controll
@@ -53,6 +62,19 @@ public class camera : MonoBehaviour
                     if (hit.collider != null)
                     {
                         _dragged = hit.collider.gameObject.transform.parent.gameObject;
+
+                        //get the snap below
+                        setSnapTo();
+
+                        if(snapTo != null)
+                        {
+                            _draggedRotation = _dragged.transform.rotation  * Quaternion.Inverse(snapTo.transform.rotation);
+                        }
+                        else
+                        {
+                            _draggedRotation = _dragged.transform.rotation;
+                        }
+
                         // store offset so you don't snap the pivot
                         _offset = _dragged.transform.position - new Vector3(wp.x, wp.y, _dragged.transform.position.z);
                     }
@@ -61,24 +83,8 @@ public class camera : MonoBehaviour
                 // ——— Mouse Hold: move object ———
                 if (Input.GetMouseButton(0) && _dragged != null)
                 {
-                    cursorPosition = _cam.ScreenToWorldPoint(Input.mousePosition);
+                    setSnapTo();
 
-                    Collider2D[] hits = Physics2D.OverlapCircleAll(cursorPosition, 1, gridSnapLayerMask);
-                    if(hits.Length == 0)
-                    {
-                        snapTo = null;
-                    }
-                    float distance = 1000;
-                    for (int i = 0; i < hits.Length; i++)
-                    {
-                        float dist = (cursorPosition - hits[i].transform.position).magnitude;
-                        if (distance > dist)
-                        {
-                            distance = dist;
-                            snapTo = hits[i].gameObject;
-                        }
-                    }
-                    Debug.Log(distance);
                     if (snapTo != null)
                     {
                         Vector3 snapPos = snapTo.transform.position;
@@ -87,10 +93,10 @@ public class camera : MonoBehaviour
 
 
                         Quaternion fromRot = _dragged.transform.rotation;
-                        Quaternion toRot = snapTo.transform.rotation;
+                        Quaternion toRot = snapTo.transform.rotation * _draggedRotation;
 
 
-                        Quaternion lerpRot = Quaternion.Lerp(fromRot, toRot, 0.01f);
+                        Quaternion lerpRot = Quaternion.Lerp(fromRot, toRot, 0.05f);
 
                         _dragged.transform.rotation = lerpRot;
                     }
@@ -102,7 +108,7 @@ public class camera : MonoBehaviour
 
 
                         Quaternion fromRot = _dragged.transform.rotation;
-                        Quaternion toRot = Quaternion.identity;
+                        Quaternion toRot = Quaternion.identity * _draggedRotation;
 
 
                         Quaternion lerpRot = Quaternion.Lerp(fromRot, toRot, 0.05f);
@@ -121,13 +127,28 @@ public class camera : MonoBehaviour
                     {
                         //to cursor
                         _dragged.transform.position = new Vector3(cursorPosition.x, cursorPosition.y, _dragged.transform.position.z);
-                    }else{
+                        _dragged.transform.rotation = _draggedRotation;
+                    }
+                    else{
                         //to snap
                         _dragged.transform.position = snapTo.transform.position;
+                        _dragged.transform.rotation = snapTo.transform.rotation * _draggedRotation;
                     }
                     
                     _dragged = null;
                 }
+
+                // -------Rotate block-------
+                if (Input.GetKeyDown(KeyCode.Q))
+                {
+                    _draggedRotation = Quaternion.Euler(0f, 0f, _draggedRotation.eulerAngles.z + 60);
+                }
+
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    _draggedRotation = Quaternion.Euler(0f, 0f, _draggedRotation.eulerAngles.z - 60); 
+                }
+
             }
             else
             {
@@ -149,6 +170,7 @@ public class camera : MonoBehaviour
                     if (hit.collider != null)
                     {
                         SelectObject(hit.collider.gameObject);
+                        allowControl = false;
                     }
                 }
             }
@@ -156,15 +178,7 @@ public class camera : MonoBehaviour
 
             // player move camera
             //CAMERA
-            //select what camera settings to use
-            if(selectedCityBlock != null)
-            {
-                currentCameraSettings = selectedCityBlock.GetComponent<cameraSettings>();
-            }
-            else
-            {
-                currentCameraSettings = this.GetComponent<cameraSettings>();
-            }
+            
 
            
 
@@ -172,37 +186,96 @@ public class camera : MonoBehaviour
 
 
 
-            // Read input axes (WASD or arrow keys by default)
-            float h = Input.GetAxisRaw("Horizontal"); // A/D or ←/→
-            float v = Input.GetAxisRaw("Vertical");   // W/S or ↑/↓
+            // Read input axes and mousewheel
+            float h = Input.GetAxisRaw("Horizontal");   //a,d
+            float v = Input.GetAxisRaw("Vertical");     //w,s
+            float scrollDelta = Input.GetAxis("Mouse ScrollWheel");
 
-
-            Vector3 delta = new Vector3(h, v, 0f) * 30 * Time.deltaTime;
+            //calculate position
+            Vector3 delta = new Vector3(h, v, 0f) * currentCameraSettings.cameraSpeed * Time.deltaTime;
             Vector3 deltaRotated = Rotate(delta, currentCameraSettings.relativeRotation);
             Vector3 currentCamPos = transform.position;
             Vector3 newCamPos = currentCamPos + deltaRotated;
-            //clamp
-
-
-
-
-            // Build movement vector
-
-            // Apply to camera’s position
+            //clamp position
+            
+            // Apply position
             transform.position = newCamPos;
+
+
+
+            //calculate zoom
+            float currentZoom = _cam.orthographicSize;
+            float newZoom = currentZoom - (scrollDelta * (currentCameraSettings.cameraZoomSpeed * (currentZoom /50)));
+            //clamp zoom
+
+            newZoom = Mathf.Clamp(newZoom, currentCameraSettings.limit_ZoomIn, currentCameraSettings.limit_ZoomOut);
+
+            // Apply zoom
+
+            _cam.orthographicSize = newZoom;
+
+
 
         }
         else
         {
+            int conditions = 0;
             //auto movement
+
+            //lerp position
             Vector2 camPos = this.transform.position;
-            Vector2 selectedPos = selectedCityBlock.transform.position;
+            Vector2 selectedPos = currentCameraSettings.cameraCenter;
             Vector2 lerpPos = Vector2.Lerp(camPos, selectedPos, 0.02f);
             this.transform.position = new Vector3(lerpPos.x, lerpPos.y, -10);
+
+            //lerp rotation
+            Quaternion fromRot = this.transform.rotation;
+            Quaternion toRot = Quaternion.Euler(0f, 0f, currentCameraSettings.relativeRotation);
+            Quaternion lerpRot = Quaternion.Lerp(fromRot, toRot, 0.02f);
+            this.transform.rotation = lerpRot;
+
             float dist = (selectedPos - lerpPos).magnitude;
             if (dist <= 0.3f)
             {
+                conditions++;
+            }
+            float angle = Quaternion.Angle(toRot, lerpRot);
+
+            if(angle <= 1)
+            {
+                conditions++;
+            }
+
+            if (conditions == 2)
+            {
                 allowControl = true;
+
+                //set stuff so the values are exact
+                this.transform.position = new Vector3(selectedPos.x, selectedPos.y, -10);
+                this.transform.rotation = toRot;
+            }
+
+
+        }
+    }
+
+    void setSnapTo()
+    {
+        cursorPosition = _cam.ScreenToWorldPoint(Input.mousePosition);
+
+        Collider2D[] hits = Physics2D.OverlapCircleAll(cursorPosition, 1, gridSnapLayerMask);
+        if (hits.Length == 0)
+        {
+            snapTo = null;
+        }
+        float distance = 1000;
+        for (int i = 0; i < hits.Length; i++)
+        {
+            float dist = (cursorPosition - hits[i].transform.position).magnitude;
+            if (distance > dist)
+            {
+                distance = dist;
+                snapTo = hits[i].gameObject;
             }
         }
     }
@@ -230,6 +303,5 @@ public class camera : MonoBehaviour
     private void SelectObject(GameObject selected)
     {
         selectedCityBlock = selected.transform.parent.gameObject;
-        allowControl = false;
     }
 }
