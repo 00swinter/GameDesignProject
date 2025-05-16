@@ -179,13 +179,6 @@ public class camera : MonoBehaviour
             // player move camera
             //CAMERA
             
-
-           
-
-
-
-
-
             // Read input axes and mousewheel
             float h = Input.GetAxisRaw("Horizontal");   //a,d
             float v = Input.GetAxisRaw("Vertical");     //w,s
@@ -197,7 +190,14 @@ public class camera : MonoBehaviour
             Vector3 currentCamPos = transform.position;
             Vector3 newCamPos = currentCamPos + deltaRotated;
             //clamp position
-            
+
+            newCamPos = new Vector3(
+                Mathf.Clamp(newCamPos.x, currentCameraSettings.limit_Left, currentCameraSettings.limit_Right),
+                Mathf.Clamp(newCamPos.y, currentCameraSettings.limit_Down, currentCameraSettings.limit_Top),
+                -10f
+                );
+
+
             // Apply position
             transform.position = newCamPos;
 
@@ -225,34 +225,54 @@ public class camera : MonoBehaviour
             //lerp position
             Vector2 camPos = this.transform.position;
             Vector2 selectedPos = currentCameraSettings.cameraCenter;
-            Vector2 lerpPos = Vector2.Lerp(camPos, selectedPos, 0.02f);
+            Vector2 lerpPos = Vector2.Lerp(camPos, selectedPos, 0.03f);
             this.transform.position = new Vector3(lerpPos.x, lerpPos.y, -10);
+            
+            //check pos
+            float dist = (selectedPos - lerpPos).magnitude;
+            if (dist <= 0.1f)
+            {
+                conditions++;
+            }
+
 
             //lerp rotation
             Quaternion fromRot = this.transform.rotation;
             Quaternion toRot = Quaternion.Euler(0f, 0f, currentCameraSettings.relativeRotation);
-            Quaternion lerpRot = Quaternion.Lerp(fromRot, toRot, 0.02f);
+            Quaternion lerpRot = Quaternion.Lerp(fromRot, toRot, 0.03f);
             this.transform.rotation = lerpRot;
 
-            float dist = (selectedPos - lerpPos).magnitude;
-            if (dist <= 0.3f)
-            {
-                conditions++;
-            }
+            //check rot
             float angle = Quaternion.Angle(toRot, lerpRot);
-
-            if(angle <= 1)
+            if(angle <= 0.1f)
             {
                 conditions++;
             }
 
-            if (conditions == 2)
+            //lerp Zoom
+
+            float fromZoom = _cam.orthographicSize;
+            float toZoom = currentCameraSettings.cameraZoom;
+            float lerpZoom = Mathf.Lerp(fromZoom, toZoom, 0.03f);
+            _cam.orthographicSize = lerpZoom;
+
+            //check zoom
+            float zoomDif = toZoom - lerpZoom;
+            if(Mathf.Abs(zoomDif) <= 0.1f)
+            {
+                conditions++;
+            }
+
+
+
+            if (conditions == 3)
             {
                 allowControl = true;
 
                 //set stuff so the values are exact
                 this.transform.position = new Vector3(selectedPos.x, selectedPos.y, -10);
                 this.transform.rotation = toRot;
+                _cam.orthographicSize = toZoom;
             }
 
 
@@ -263,7 +283,7 @@ public class camera : MonoBehaviour
     {
         cursorPosition = _cam.ScreenToWorldPoint(Input.mousePosition);
 
-        Collider2D[] hits = Physics2D.OverlapCircleAll(cursorPosition, 1, gridSnapLayerMask);
+        Collider2D[] hits = Physics2D.OverlapCircleAll(cursorPosition, 0.5f, gridSnapLayerMask);
         if (hits.Length == 0)
         {
             snapTo = null;
