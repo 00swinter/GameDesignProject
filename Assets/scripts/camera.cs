@@ -11,6 +11,7 @@ public class camera : MonoBehaviour
     [SerializeField] private LayerMask solarPanelLayerMask;
     [SerializeField] private LayerMask gridSnapLayerMask;
     [SerializeField] private GameObject selectedCityBlock;
+    [SerializeField] private cameraSettings currentCameraSettings;
 
     [SerializeField] private bool allowControl = true;
 
@@ -154,17 +155,41 @@ public class camera : MonoBehaviour
 
 
             // player move camera
-
             //CAMERA
+            //select what camera settings to use
+            if(selectedCityBlock != null)
+            {
+                currentCameraSettings = selectedCityBlock.GetComponent<cameraSettings>();
+            }
+            else
+            {
+                currentCameraSettings = this.GetComponent<cameraSettings>();
+            }
+
+           
+
+
+
+
+
             // Read input axes (WASD or arrow keys by default)
             float h = Input.GetAxisRaw("Horizontal"); // A/D or ←/→
             float v = Input.GetAxisRaw("Vertical");   // W/S or ↑/↓
 
+
+            Vector3 delta = new Vector3(h, v, 0f) * 30 * Time.deltaTime;
+            Vector3 deltaRotated = Rotate(delta, currentCameraSettings.relativeRotation);
+            Vector3 currentCamPos = transform.position;
+            Vector3 newCamPos = currentCamPos + deltaRotated;
+            //clamp
+
+
+
+
             // Build movement vector
-            Vector3 delta = new Vector3(h, v, 0f) * 6 * Time.deltaTime;
 
             // Apply to camera’s position
-            transform.position += delta;
+            transform.position = newCamPos;
 
         }
         else
@@ -182,6 +207,17 @@ public class camera : MonoBehaviour
         }
     }
 
+    Vector2 Rotate(Vector2 v, float degrees)
+    {
+        float radians = degrees * Mathf.Deg2Rad;
+        float cos = Mathf.Cos(radians);
+        float sin = Mathf.Sin(radians);
+        return new Vector2(
+            v.x * cos - v.y * sin,
+            v.x * sin + v.y * cos
+        );
+    }
+
     public static Vector3 QuadraticEaseIn(Vector3 start, Vector3 end, float t)
     {
 
@@ -193,7 +229,7 @@ public class camera : MonoBehaviour
 
     private void SelectObject(GameObject selected)
     {
-        selectedCityBlock = selected;
+        selectedCityBlock = selected.transform.parent.gameObject;
         allowControl = false;
     }
 }
