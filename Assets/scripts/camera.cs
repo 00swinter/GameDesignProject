@@ -19,6 +19,8 @@ public class camera : MonoBehaviour
     private GameObject _dragged;
     private Quaternion _draggedRotation;
     private Vector3 _offset;
+    private Vector3 _startPos;
+    private Quaternion _startRot;
 
     [SerializeField] private GameObject snapTo = null;
     [SerializeField] private Vector3 cursorPosition = Vector3.zero;
@@ -40,7 +42,7 @@ public class camera : MonoBehaviour
 
         //select what camera settings to use
         if (selectedCityBlock != null)
-        {
+        {// make faster maybe
             currentCameraSettings = selectedCityBlock.GetComponent<cameraSettings>();
         }
         else
@@ -51,104 +53,10 @@ public class camera : MonoBehaviour
         if (allowControl)
         {
             //player controll
-            if(selectedCityBlock != null)
+            if (selectedCityBlock != null)
             {
                 //place blocks
-                // ——— Mouse Down: begin drag ———
-                if (Input.GetMouseButtonDown(0) && _dragged == null)
-                {
-                    Vector2 wp = _cam.ScreenToWorldPoint(Input.mousePosition);
-                    RaycastHit2D hit = Physics2D.Raycast(wp, Vector2.zero, Mathf.Infinity, solarPanelLayerMask);
-                    if (hit.collider != null)
-                    {
-                        _dragged = hit.collider.gameObject.transform.parent.gameObject;
-
-                        //get the snap below
-                        setSnapTo();
-
-                        if(snapTo != null)
-                        {
-                            _draggedRotation = _dragged.transform.rotation  * Quaternion.Inverse(snapTo.transform.rotation);
-                        }
-                        else
-                        {
-                            _draggedRotation = _dragged.transform.rotation;
-                        }
-
-                        // store offset so you don't snap the pivot
-                        _offset = _dragged.transform.position - new Vector3(wp.x, wp.y, _dragged.transform.position.z);
-                    }
-                }
-
-                // ——— Mouse Hold: move object ———
-                if (Input.GetMouseButton(0) && _dragged != null)
-                {
-                    setSnapTo();
-
-                    if (snapTo != null)
-                    {
-                        Vector3 snapPos = snapTo.transform.position;
-                        Vector3 lerpPos = QuadraticEaseIn(_dragged.transform.position, snapPos, 0.01f);
-                        _dragged.transform.position = new Vector3(lerpPos.x, lerpPos.y, _dragged.transform.position.z);
-
-
-                        Quaternion fromRot = _dragged.transform.rotation;
-                        Quaternion toRot = snapTo.transform.rotation * _draggedRotation;
-
-
-                        Quaternion lerpRot = Quaternion.Lerp(fromRot, toRot, 0.05f);
-
-                        _dragged.transform.rotation = lerpRot;
-                    }
-                    else
-                    {
-
-                        Vector3 lerpPos = Vector3.Lerp(_dragged.transform.position, cursorPosition + _offset, 0.05f);
-                        _dragged.transform.position = new Vector3(lerpPos.x, lerpPos.y, _dragged.transform.position.z);
-
-
-                        Quaternion fromRot = _dragged.transform.rotation;
-                        Quaternion toRot = Quaternion.identity * _draggedRotation;
-
-
-                        Quaternion lerpRot = Quaternion.Lerp(fromRot, toRot, 0.05f);
-
-                        _dragged.transform.rotation = lerpRot;
-                    }
-
-
-
-                }
-
-                // ——— Mouse Up: drop ———
-                if (Input.GetMouseButtonUp(0) && _dragged != null)
-                {
-                    if(snapTo == null)
-                    {
-                        //to cursor
-                        _dragged.transform.position = new Vector3(cursorPosition.x, cursorPosition.y, _dragged.transform.position.z);
-                        _dragged.transform.rotation = _draggedRotation;
-                    }
-                    else{
-                        //to snap
-                        _dragged.transform.position = snapTo.transform.position;
-                        _dragged.transform.rotation = snapTo.transform.rotation * _draggedRotation;
-                    }
-                    
-                    _dragged = null;
-                }
-
-                // -------Rotate block-------
-                if (Input.GetKeyDown(KeyCode.Q))
-                {
-                    _draggedRotation = Quaternion.Euler(0f, 0f, _draggedRotation.eulerAngles.z + 60);
-                }
-
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    _draggedRotation = Quaternion.Euler(0f, 0f, _draggedRotation.eulerAngles.z - 60); 
-                }
-
+                blockPlacingLogic();
             }
             else
             {
@@ -178,34 +86,52 @@ public class camera : MonoBehaviour
 
             // player move camera
             //CAMERA
-            
+
             // Read input axes and mousewheel
             float h = Input.GetAxisRaw("Horizontal");   //a,d
             float v = Input.GetAxisRaw("Vertical");     //w,s
             float scrollDelta = Input.GetAxis("Mouse ScrollWheel");
 
-            //calculate position
+
+
+            Vector3 newCamPos = transform.position;
+
+            //transform to origin
+            newCamPos = newCamPos - currentCameraSettings.cameraCenter;
+
+            //undo rotation
+            newCamPos = Rotate(newCamPos, -currentCameraSettings.relativeRotation);
+
+            //delta
             Vector3 delta = new Vector3(h, v, 0f) * currentCameraSettings.cameraSpeed * Time.deltaTime;
-            Vector3 deltaRotated = Rotate(delta, currentCameraSettings.relativeRotation);
-            Vector3 currentCamPos = transform.position;
-            Vector3 newCamPos = currentCamPos + deltaRotated;
-            //clamp position
+
+            //add delte
+            newCamPos = newCamPos + delta;
+
+            //clamp
 
             newCamPos = new Vector3(
-                Mathf.Clamp(newCamPos.x, currentCameraSettings.limit_Left, currentCameraSettings.limit_Right),
-                Mathf.Clamp(newCamPos.y, currentCameraSettings.limit_Down, currentCameraSettings.limit_Top),
-                -10f
-                );
+                            Mathf.Clamp(newCamPos.x, currentCameraSettings.limit_Left, currentCameraSettings.limit_Right),
+                            Mathf.Clamp(newCamPos.y, currentCameraSettings.limit_Down, currentCameraSettings.limit_Top),
+                            -10
+                            );
 
+            //rotate back
+            newCamPos = Rotate(newCamPos, currentCameraSettings.relativeRotation);
 
-            // Apply position
+            //set z  to -10
+            newCamPos.z = -10;
+
+            //transform back
+            newCamPos = newCamPos + currentCameraSettings.cameraCenter;
+
+            //apply
             transform.position = newCamPos;
-
 
 
             //calculate zoom
             float currentZoom = _cam.orthographicSize;
-            float newZoom = currentZoom - (scrollDelta * (currentCameraSettings.cameraZoomSpeed * (currentZoom /50)));
+            float newZoom = currentZoom - (scrollDelta * (currentCameraSettings.cameraZoomSpeed * (currentZoom / 50)));
             //clamp zoom
 
             newZoom = Mathf.Clamp(newZoom, currentCameraSettings.limit_ZoomIn, currentCameraSettings.limit_ZoomOut);
@@ -225,9 +151,9 @@ public class camera : MonoBehaviour
             //lerp position
             Vector2 camPos = this.transform.position;
             Vector2 selectedPos = currentCameraSettings.cameraCenter;
-            Vector2 lerpPos = Vector2.Lerp(camPos, selectedPos, 0.03f);
+            Vector2 lerpPos = Vector2.Lerp(camPos, selectedPos, 0.05f);
             this.transform.position = new Vector3(lerpPos.x, lerpPos.y, -10);
-            
+
             //check pos
             float dist = (selectedPos - lerpPos).magnitude;
             if (dist <= 0.1f)
@@ -239,12 +165,12 @@ public class camera : MonoBehaviour
             //lerp rotation
             Quaternion fromRot = this.transform.rotation;
             Quaternion toRot = Quaternion.Euler(0f, 0f, currentCameraSettings.relativeRotation);
-            Quaternion lerpRot = Quaternion.Lerp(fromRot, toRot, 0.03f);
+            Quaternion lerpRot = Quaternion.Lerp(fromRot, toRot, 0.05f);
             this.transform.rotation = lerpRot;
 
             //check rot
             float angle = Quaternion.Angle(toRot, lerpRot);
-            if(angle <= 0.1f)
+            if (angle <= 0.1f)
             {
                 conditions++;
             }
@@ -253,12 +179,12 @@ public class camera : MonoBehaviour
 
             float fromZoom = _cam.orthographicSize;
             float toZoom = currentCameraSettings.cameraZoom;
-            float lerpZoom = Mathf.Lerp(fromZoom, toZoom, 0.03f);
+            float lerpZoom = Mathf.Lerp(fromZoom, toZoom, 0.05f);
             _cam.orthographicSize = lerpZoom;
 
             //check zoom
             float zoomDif = toZoom - lerpZoom;
-            if(Mathf.Abs(zoomDif) <= 0.1f)
+            if (Mathf.Abs(zoomDif) <= 0.1f)
             {
                 conditions++;
             }
@@ -277,6 +203,133 @@ public class camera : MonoBehaviour
 
 
         }
+    }
+
+    void blockPlacingLogic()
+    {
+        // ——— Mouse Down: begin drag ———
+        if (Input.GetMouseButtonDown(0) && _dragged == null)
+        {
+            Vector2 wp = _cam.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(wp, Vector2.zero, Mathf.Infinity, solarPanelLayerMask);
+            if (hit.collider != null)
+            {
+                _dragged = hit.collider.gameObject.transform.parent.gameObject;
+                _startPos = _dragged.transform.position;
+                _startRot = _dragged.transform.rotation;
+
+                //get the snap below
+                setSnapTo();
+
+                if (snapTo != null)
+                {
+                    _draggedRotation = _dragged.transform.rotation * Quaternion.Inverse(snapTo.transform.rotation);
+                }
+                else
+                {
+                    _draggedRotation = _dragged.transform.rotation;
+                }
+
+                // store offset so you don't snap the pivot
+                _offset = _dragged.transform.position - new Vector3(wp.x, wp.y, _dragged.transform.position.z);
+            }
+        }
+
+        // ——— Mouse Hold: move object ———
+        if (Input.GetMouseButton(0) && _dragged != null)
+        {
+            setSnapTo();
+
+            if (snapTo != null)
+            {
+                Vector3 snapPos = snapTo.transform.position;
+                Vector3 lerpPos = QuadraticEaseIn(_dragged.transform.position, snapPos, 0.03f);
+                _dragged.transform.position = new Vector3(lerpPos.x, lerpPos.y, -5);
+
+
+                Quaternion fromRot = _dragged.transform.rotation;
+                Quaternion toRot = snapTo.transform.rotation * _draggedRotation;
+
+
+                Quaternion lerpRot = Quaternion.Lerp(fromRot, toRot, 0.06f);
+
+                _dragged.transform.rotation = lerpRot;
+            }
+            else
+            {
+
+                Vector3 lerpPos = Vector3.Lerp(_dragged.transform.position, cursorPosition + _offset, 0.03f);
+                _dragged.transform.position = new Vector3(lerpPos.x, lerpPos.y, -5);
+
+
+                Quaternion fromRot = _dragged.transform.rotation;
+                Quaternion toRot = Quaternion.identity * _draggedRotation;
+
+
+                Quaternion lerpRot = Quaternion.Lerp(fromRot, toRot, 0.06f);
+
+                _dragged.transform.rotation = lerpRot;
+            }
+
+
+
+        }
+
+        // ——— Mouse Up: drop ———
+        if (Input.GetMouseButtonUp(0) && _dragged != null)
+        {
+            if (snapTo == null)
+            {
+                //to cursor
+                _dragged.transform.position = new Vector3(cursorPosition.x, cursorPosition.y, -1);
+                _dragged.transform.rotation = _draggedRotation;
+            }
+            else
+            {
+                //to snap
+                _dragged.transform.position = new Vector3(snapTo.transform.position.x, snapTo.transform.position.y, -1);
+                _dragged.transform.rotation = snapTo.transform.rotation * _draggedRotation;
+                if (blockIsColliding())
+                {
+                    _dragged.transform.position = _startPos;
+                    _dragged.transform.rotation = _startRot;
+
+                }
+            }
+            Debug.Log(blockIsColliding());
+            _dragged = null;
+        }
+
+        // -------Rotate block-------
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            _draggedRotation = Quaternion.Euler(0f, 0f, _draggedRotation.eulerAngles.z + 60);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            _draggedRotation = Quaternion.Euler(0f, 0f, _draggedRotation.eulerAngles.z - 60);
+        }
+    }
+
+    bool blockIsColliding(){
+
+        Physics2D.SyncTransforms();
+        /*
+        foreach (Transform childTransform in _dragged.transform)
+        {
+            Debug.Log("for");
+            GameObject child = childTransform.gameObject;
+            Collider2D partCollider = child.GetComponent<Collider2D>();
+            if (partCollider.IsTouchingLayers(solarPanelLayerMask))
+            {
+                return true;
+            }
+        }
+        */
+
+        Rigidbody2D rb = _dragged.GetComponent<Rigidbody2D>();
+        return rb.IsTouchingLayers(solarPanelLayerMask);
     }
 
     void setSnapTo()
@@ -316,7 +369,7 @@ public class camera : MonoBehaviour
 
         float dist = (start - end).magnitude;
         dist = Mathf.Clamp(dist, 0, 0.8f);
-        return Vector3.Lerp(start, end, t * 1/(dist*dist));
+        return Vector3.Lerp(start, end, t * 1 / (dist * dist));
         // or: return start + (end - start) * quad;
     }
 
