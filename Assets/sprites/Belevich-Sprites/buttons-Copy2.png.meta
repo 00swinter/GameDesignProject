@@ -1,0 +1,1767 @@
+fileFormatVersion: 2
+guid: c2da8d67e262f2d4db3591766ce21440
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7900278740228984979
+    second: buttons-Copy2_0
+  - first:
+      213: -1017290034755543305
+    second: buttons-Copy2_1
+  - first:
+      213: 6693927580081269773
+    second: buttons-Copy2_2
+  - first:
+      213: 9165988554500913232
+    second: buttons-Copy2_3
+  - first:
+      213: 8387438130278400597
+    second: buttons-Copy2_4
+  - first:
+      213: -8287121451674436962
+    second: buttons-Copy2_5
+  - first:
+      213: 7868091995704159758
+    second: buttons-Copy2_6
+  - first:
+      213: 718993678190878536
+    second: buttons-Copy2_7
+  - first:
+      213: 6536598683286530119
+    second: buttons-Copy2_8
+  - first:
+      213: -5067447218008404213
+    second: buttons-Copy2_9
+  - first:
+      213: 5549061616782411108
+    second: buttons-Copy2_10
+  - first:
+      213: 4982660704539779450
+    second: buttons-Copy2_11
+  - first:
+      213: 5567832838129700937
+    second: buttons-Copy2_12
+  - first:
+      213: -5823079134396880638
+    second: buttons-Copy2_13
+  - first:
+      213: 2373288347524371675
+    second: buttons-Copy2_14
+  - first:
+      213: -5167362608706976691
+    second: buttons-Copy2_15
+  - first:
+      213: 7892013281533203517
+    second: buttons-Copy2_16
+  - first:
+      213: 339659091609082750
+    second: buttons-Copy2_17
+  - first:
+      213: -9044185005850889044
+    second: buttons-Copy2_18
+  - first:
+      213: -5793139592839568816
+    second: buttons-Copy2_19
+  - first:
+      213: -3615599526681964637
+    second: buttons-Copy2_20
+  - first:
+      213: -6531888993008859326
+    second: buttons-Copy2_21
+  - first:
+      213: 8386128412671207887
+    second: buttons-Copy2_22
+  - first:
+      213: -1972922454639724955
+    second: buttons-Copy2_23
+  - first:
+      213: 8088474315155115121
+    second: buttons-Copy2_24
+  - first:
+      213: 6209463192180999719
+    second: buttons-Copy2_25
+  - first:
+      213: -5551899101086744103
+    second: buttons-Copy2_26
+  - first:
+      213: 5676278348237939418
+    second: buttons-Copy2_27
+  - first:
+      213: 2039867048842753496
+    second: buttons-Copy2_28
+  - first:
+      213: -2598497195838097984
+    second: buttons-Copy2_29
+  - first:
+      213: -146933548701484369
+    second: buttons-Copy2_30
+  - first:
+      213: 1185223933962600328
+    second: buttons-Copy2_31
+  - first:
+      213: 3718979487863724992
+    second: buttons-Copy2_32
+  - first:
+      213: 4013181051713820308
+    second: buttons-Copy2_33
+  - first:
+      213: -658745228887893530
+    second: buttons-Copy2_34
+  - first:
+      213: 6834418186982925553
+    second: buttons-Copy2_35
+  - first:
+      213: 3710317942809354346
+    second: buttons-Copy2_36
+  - first:
+      213: -778264500261697611
+    second: buttons-Copy2_37
+  - first:
+      213: -756686156960907067
+    second: buttons-Copy2_38
+  - first:
+      213: -7678583254965138868
+    second: buttons-Copy2_39
+  - first:
+      213: -4607431883467110150
+    second: buttons-Copy2_40
+  - first:
+      213: -2382227253003928268
+    second: buttons-Copy2_41
+  - first:
+      213: -5223469205691234786
+    second: buttons-Copy2_42
+  - first:
+      213: 8533207111622086212
+    second: buttons-Copy2_43
+  - first:
+      213: 5863632632907110992
+    second: buttons-Copy2_44
+  - first:
+      213: -3012961516491753267
+    second: buttons-Copy2_45
+  - first:
+      213: -1594483118715921178
+    second: buttons-Copy2_46
+  - first:
+      213: 5051946831706567340
+    second: buttons-Copy2_47
+  - first:
+      213: -787107951946321752
+    second: buttons-Copy2_48
+  - first:
+      213: -2984544243538772473
+    second: buttons-Copy2_49
+  - first:
+      213: -3471854331396668013
+    second: buttons-Copy2_50
+  - first:
+      213: -2878418655706100428
+    second: buttons-Copy2_51
+  - first:
+      213: -187566021527708691
+    second: buttons-Copy2_52
+  - first:
+      213: 8033936806717709521
+    second: buttons-Copy2_53
+  - first:
+      213: 5430615495419393503
+    second: buttons-Copy2_54
+  - first:
+      213: -2012809379313043186
+    second: buttons-Copy2_55
+  - first:
+      213: -1008326436077070319
+    second: buttons-Copy2_56
+  - first:
+      213: 2297820492274384364
+    second: buttons-Copy2_57
+  - first:
+      213: 8119393671474515678
+    second: buttons-Copy2_58
+  - first:
+      213: -7692688597046239173
+    second: buttons-Copy2_59
+  - first:
+      213: 5299889876625431933
+    second: buttons-Copy2_60
+  - first:
+      213: -3265987968981840631
+    second: buttons-Copy2_61
+  - first:
+      213: -2358486659196803575
+    second: buttons-Copy2_62
+  - first:
+      213: -6606120212958996140
+    second: buttons-Copy2_63
+  - first:
+      213: 7993734507589794724
+    second: buttons-Copy2_64
+  - first:
+      213: 181988454514848003
+    second: buttons-Copy2_65
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: buttons-Copy2_0
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 2855
+        width: 881
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6fa41ed7529c5290800000000000000
+      internalID: -7900278740228984979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_1
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 2856
+        width: 1372
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fed9dc6a1cd1e1f0800000000000000
+      internalID: -1017290034755543305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_2
+      rect:
+        serializedVersion: 2
+        x: 3935
+        y: 2856
+        width: 1372
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0c2fea0bab95ec50800000000000000
+      internalID: 6693927580081269773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_3
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 2460
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 058b25ed602243f70800000000000000
+      internalID: 9165988554500913232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_4
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 2459
+        width: 155
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5528fca7a8a266470800000000000000
+      internalID: 8387438130278400597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_5
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 2458
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9afc6e52fa3efc80800000000000000
+      internalID: -8287121451674436962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_6
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 2460
+        width: 155
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0e6a00bbf3113d60800000000000000
+      internalID: 7868091995704159758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 2459
+        width: 155
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84f9150e0f06af900800000000000000
+      internalID: 718993678190878536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_8
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 2458
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 748649cbed9a6ba50800000000000000
+      internalID: 6536598683286530119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_9
+      rect:
+        serializedVersion: 2
+        x: 2392
+        y: 2458
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0f419c8a9fcca9b0800000000000000
+      internalID: -5067447218008404213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_10
+      rect:
+        serializedVersion: 2
+        x: 2689
+        y: 2458
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4650219e32a320d40800000000000000
+      internalID: 5549061616782411108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_11
+      rect:
+        serializedVersion: 2
+        x: 3074
+        y: 2458
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a712462f287f52540800000000000000
+      internalID: 4982660704539779450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_12
+      rect:
+        serializedVersion: 2
+        x: 3771
+        y: 2377
+        width: 740
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 940d975777ae44d40800000000000000
+      internalID: 5567832838129700937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_13
+      rect:
+        serializedVersion: 2
+        x: 4686
+        y: 2377
+        width: 740
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 209e8471164403fa0800000000000000
+      internalID: -5823079134396880638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_14
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 2177
+        width: 67
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd493c78d2d9fe020800000000000000
+      internalID: 2373288347524371675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_15
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 2177
+        width: 67
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d448262d517d948b0800000000000000
+      internalID: -5167362608706976691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_16
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 2187
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3493701440168d60800000000000000
+      internalID: 7892013281533203517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_17
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 2187
+        width: 77
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7b571ce426b6b400800000000000000
+      internalID: 339659091609082750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_18
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 2181
+        width: 91
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca4f753c7a99c7280800000000000000
+      internalID: -9044185005850889044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_19
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 2181
+        width: 91
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 052eb82db32aa9fa0800000000000000
+      internalID: -5793139592839568816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_20
+      rect:
+        serializedVersion: 2
+        x: 2473
+        y: 2209
+        width: 91
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3af0d02036fc2ddc0800000000000000
+      internalID: -3615599526681964637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_21
+      rect:
+        serializedVersion: 2
+        x: 2746
+        y: 2209
+        width: 91
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2474c6b71911a55a0800000000000000
+      internalID: -6531888993008859326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_22
+      rect:
+        serializedVersion: 2
+        x: 3771
+        y: 1974
+        width: 740
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc9e3161c53816470800000000000000
+      internalID: 8386128412671207887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_23
+      rect:
+        serializedVersion: 2
+        x: 4688
+        y: 1974
+        width: 740
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 566bec10b75ce94e0800000000000000
+      internalID: -1972922454639724955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_24
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 1782
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17c01b9f888004070800000000000000
+      internalID: 8088474315155115121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_25
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 1782
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 726cfc7cfd17c2650800000000000000
+      internalID: 6209463192180999719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_26
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 1781
+        width: 216
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d10aeace21b3f2b0800000000000000
+      internalID: -5551899101086744103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_27
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 1784
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad2a6f0651136ce40800000000000000
+      internalID: 5676278348237939418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_28
+      rect:
+        serializedVersion: 2
+        x: 2189
+        y: 1784
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d5fb43f5401f4c10800000000000000
+      internalID: 2039867048842753496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_29
+      rect:
+        serializedVersion: 2
+        x: 2618
+        y: 1783
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c5b83c519840fbd0800000000000000
+      internalID: -2598497195838097984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_30
+      rect:
+        serializedVersion: 2
+        x: 3049
+        y: 1784
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faa7f0847bcf5fdf0800000000000000
+      internalID: -146933548701484369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_31
+      rect:
+        serializedVersion: 2
+        x: 3771
+        y: 1568
+        width: 740
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88fb12b63e2c27010800000000000000
+      internalID: 1185223933962600328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_32
+      rect:
+        serializedVersion: 2
+        x: 4685
+        y: 1567
+        width: 740
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cbd415e3287c9330800000000000000
+      internalID: 3718979487863724992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_33
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 1377
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4961bbe57eea1b730800000000000000
+      internalID: 4013181051713820308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_34
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 1376
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e957aa54baabd6f0800000000000000
+      internalID: -658745228887893530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_35
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 1376
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f42699712bb8de50800000000000000
+      internalID: 6834418186982925553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_36
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 1375
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a60e8e8c282bd7330800000000000000
+      internalID: 3710317942809354346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_37
+      rect:
+        serializedVersion: 2
+        x: 2186
+        y: 1378
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b7ca987f8c0335f0800000000000000
+      internalID: -778264500261697611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_38
+      rect:
+        serializedVersion: 2
+        x: 2620
+        y: 1375
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c0c3e703f5bf75f0800000000000000
+      internalID: -756686156960907067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_39
+      rect:
+        serializedVersion: 2
+        x: 3053
+        y: 1374
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4a4a856631307590800000000000000
+      internalID: -7678583254965138868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_40
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 966
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af8422bfc1d1f00c0800000000000000
+      internalID: -4607431883467110150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_41
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 967
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43d327a5fe0a0fed0800000000000000
+      internalID: -2382227253003928268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_42
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 967
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e16059bbe628287b0800000000000000
+      internalID: -5223469205691234786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_43
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 967
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44e421b38aa0c6670800000000000000
+      internalID: 8533207111622086212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_44
+      rect:
+        serializedVersion: 2
+        x: 2185
+        y: 967
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05a11d110decf5150800000000000000
+      internalID: 5863632632907110992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_45
+      rect:
+        serializedVersion: 2
+        x: 2624
+        y: 966
+        width: 216
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc8369fc67fcf26d0800000000000000
+      internalID: -3012961516491753267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_46
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 662
+        width: 117
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ec949c2d024fd9e0800000000000000
+      internalID: -1594483118715921178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_47
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 662
+        width: 117
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca2b70880ee1c1640800000000000000
+      internalID: 5051946831706567340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_48
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 662
+        width: 144
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a0ba5cec71a315f0800000000000000
+      internalID: -787107951946321752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_49
+      rect:
+        serializedVersion: 2
+        x: 1629
+        y: 662
+        width: 144
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70e3f63c2d4c496d0800000000000000
+      internalID: -2984544243538772473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_50
+      rect:
+        serializedVersion: 2
+        x: 1952
+        y: 648
+        width: 132
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 395433951ee71dfc0800000000000000
+      internalID: -3471854331396668013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_51
+      rect:
+        serializedVersion: 2
+        x: 2270
+        y: 648
+        width: 132
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43dc7cfab7dcd08d0800000000000000
+      internalID: -2878418655706100428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_52
+      rect:
+        serializedVersion: 2
+        x: 2582
+        y: 690
+        width: 131
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deb58ea72b1a56df0800000000000000
+      internalID: -187566021527708691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_53
+      rect:
+        serializedVersion: 2
+        x: 2901
+        y: 690
+        width: 131
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dc5858c5f64e7f60800000000000000
+      internalID: 8033936806717709521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_54
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 242
+        width: 80
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd5743c350c6d5b40800000000000000
+      internalID: 5430615495419393503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_55
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 269
+        width: 31
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e09b879a8801114e0800000000000000
+      internalID: -2012809379313043186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_56
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 242
+        width: 80
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1189dffd274b102f0800000000000000
+      internalID: -1008326436077070319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_57
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 269
+        width: 31
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cedb0a7309f73ef10800000000000000
+      internalID: 2297820492274384364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_58
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 242
+        width: 144
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ede0bcb9681eda070800000000000000
+      internalID: 8119393671474515678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_59
+      rect:
+        serializedVersion: 2
+        x: 1969
+        y: 242
+        width: 144
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b306c558a741e3590800000000000000
+      internalID: -7692688597046239173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_60
+      rect:
+        serializedVersion: 2
+        x: 2299
+        y: 234
+        width: 96
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7d92f443cdfc8940800000000000000
+      internalID: 5299889876625431933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_61
+      rect:
+        serializedVersion: 2
+        x: 2577
+        y: 234
+        width: 96
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90d43240f31eca2d0800000000000000
+      internalID: -3265987968981840631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_62
+      rect:
+        serializedVersion: 2
+        x: 3625
+        y: 243
+        width: 346
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 906a31711e8f44fd0800000000000000
+      internalID: -2358486659196803575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_63
+      rect:
+        serializedVersion: 2
+        x: 4053
+        y: 243
+        width: 432
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4591d03caa85254a0800000000000000
+      internalID: -6606120212958996140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_64
+      rect:
+        serializedVersion: 2
+        x: 4565
+        y: 243
+        width: 432
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4abfba99e237fee60800000000000000
+      internalID: 7993734507589794724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: buttons-Copy2_65
+      rect:
+        serializedVersion: 2
+        x: 5085
+        y: 243
+        width: 430
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3017490098d868200800000000000000
+      internalID: 181988454514848003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
