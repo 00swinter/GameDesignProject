@@ -9,9 +9,9 @@ public class CollapsibleUI : MonoBehaviour
 	public RectTransform collapsiblePanel;
 	public float animationDuration = 0.25f;
 
-	private bool isExpanded = true;
+	public bool isExpanded = true;
 	private Vector2 expandedSize;
-	private Vector2 collapsedSize = new Vector2(45, 45);
+	public Vector2 collapsedSize = new Vector2(45, 45);
 	private CanvasGroup canvasGroup;
 
 	void Start()
@@ -21,6 +21,39 @@ public class CollapsibleUI : MonoBehaviour
 		collapsedSize.y = expandedSize.y;
 		closeButton.onClick.AddListener(TogglePanel);
 		openButton.onClick.AddListener(TogglePanel);
+		isExpanded = true;
+		collapsiblePanel.sizeDelta = expandedSize;
+		canvasGroup.alpha = 1f;
+		canvasGroup.interactable = true;
+		canvasGroup.blocksRaycasts = true;
+		openButton.gameObject.SetActive(false);
+		if (canvasGroup == null)
+			Debug.LogWarning("CanvasGroup not found on collapsiblePanel or its children.");
+		Time.timeScale = 1;
+	}
+
+	void OnEnable()
+	{
+		Time.timeScale = 1;
+	//	if (canvasGroup == null)
+	//		canvasGroup = collapsiblePanel.transform.GetComponentInChildren<CanvasGroup>();
+
+		//	expandedSize = collapsiblePanel.sizeDelta;
+		//	collapsedSize.y = expandedSize.y;
+
+		//	closeButton.onClick.RemoveAllListeners();
+		//	closeButton.onClick.AddListener(TogglePanel);
+
+		//	openButton.onClick.RemoveAllListeners();
+		//	openButton.onClick.AddListener(TogglePanel);
+
+		//	// Reset state
+		//	isExpanded = true;
+		//	collapsiblePanel.sizeDelta = expandedSize;
+		//	canvasGroup.alpha = 1f;
+		//	canvasGroup.interactable = true;
+		//	canvasGroup.blocksRaycasts = true;
+		//	openButton.gameObject.SetActive(false);
 	}
 
 	public void TogglePanel()
