@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      visibility_off_128dp_E3E3E3_FILL0_wght400_GRAD0_opsz48_0: 1507555708939972714
+      visibility_off_128dp_E3E3E3_FILL0_wght400_GRAD0_opsz48_1: 3110797479137844589
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

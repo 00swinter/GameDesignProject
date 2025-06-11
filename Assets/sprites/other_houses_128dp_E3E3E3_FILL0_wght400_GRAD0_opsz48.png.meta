@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      other_houses_128dp_E3E3E3_FILL0_wght400_GRAD0_opsz48_0: -3077550221540164835
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

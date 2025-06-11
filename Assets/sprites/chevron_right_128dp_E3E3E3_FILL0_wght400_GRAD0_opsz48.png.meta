@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      chevron_right_128dp_E3E3E3_FILL0_wght400_GRAD0_opsz48_0: -6039100558182613412
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

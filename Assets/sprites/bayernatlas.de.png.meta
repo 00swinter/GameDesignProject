@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bayernatlas.de_0: -276852220952368932
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

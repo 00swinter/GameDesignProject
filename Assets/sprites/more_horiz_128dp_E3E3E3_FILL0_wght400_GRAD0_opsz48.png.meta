@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      more_horiz_128dp_E3E3E3_FILL0_wght400_GRAD0_opsz48_0: -6911275406041949056
+      more_horiz_128dp_E3E3E3_FILL0_wght400_GRAD0_opsz48_1: 7550384741315513906
+      more_horiz_128dp_E3E3E3_FILL0_wght400_GRAD0_opsz48_2: -6136735249406118096
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
