@@ -15830,6 +15830,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ContinueButton (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3513597476760133170, guid: 3bd08f36e7cbfc44ca032dfeb5c94157, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2030448717}
+    - target: {fileID: 3513597476760133170, guid: 3bd08f36e7cbfc44ca032dfeb5c94157, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleHelpMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 5004754011255575581, guid: 3bd08f36e7cbfc44ca032dfeb5c94157, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -15909,14 +15917,6 @@ PrefabInstance:
     - target: {fileID: 5004754011255575581, guid: 3bd08f36e7cbfc44ca032dfeb5c94157, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3513597476760133170, guid: 3bd08f36e7cbfc44ca032dfeb5c94157, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2030448717}
-    - target: {fileID: 3513597476760133170, guid: 3bd08f36e7cbfc44ca032dfeb5c94157, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleHelpMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -18496,6 +18496,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ContinueButton (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3513597476760133170, guid: 3bd08f36e7cbfc44ca032dfeb5c94157, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2030448717}
+    - target: {fileID: 3513597476760133170, guid: 3bd08f36e7cbfc44ca032dfeb5c94157, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitToMainMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 5004754011255575581, guid: 3bd08f36e7cbfc44ca032dfeb5c94157, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -18575,14 +18583,6 @@ PrefabInstance:
     - target: {fileID: 5004754011255575581, guid: 3bd08f36e7cbfc44ca032dfeb5c94157, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3513597476760133170, guid: 3bd08f36e7cbfc44ca032dfeb5c94157, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2030448717}
-    - target: {fileID: 3513597476760133170, guid: 3bd08f36e7cbfc44ca032dfeb5c94157, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: QuitToMainMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -35154,6 +35154,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ContinueButton (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3513597476760133170, guid: 3bd08f36e7cbfc44ca032dfeb5c94157, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2030448717}
+    - target: {fileID: 3513597476760133170, guid: 3bd08f36e7cbfc44ca032dfeb5c94157, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5004754011255575581, guid: 3bd08f36e7cbfc44ca032dfeb5c94157, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -35233,14 +35241,6 @@ PrefabInstance:
     - target: {fileID: 5004754011255575581, guid: 3bd08f36e7cbfc44ca032dfeb5c94157, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3513597476760133170, guid: 3bd08f36e7cbfc44ca032dfeb5c94157, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2030448717}
-    - target: {fileID: 3513597476760133170, guid: 3bd08f36e7cbfc44ca032dfeb5c94157, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
