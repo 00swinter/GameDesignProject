@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f34607a2337e1fa4da91f3aef1cb73c3
+guid: b6bc290c5fb5d2b4d830dc9d31d43119
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -107,5 +107,5 @@ AssetOrigin:
   productId: 202525
   packageName: 'UX Flat Icons [Free]'
   packageVersion: 2019.1.1
-  assetPath: Assets/sprites/HeathenEngineering-Icons/Free Flat Cart Icon.png
+  assetPath: Assets/sprites/HeathenEngineering-Icons/Free Flat Magnify Icon.png
   uploadId: 451587

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f34607a2337e1fa4da91f3aef1cb73c3
+guid: fb23ae9c9c616a34a808b7e87e761a4b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -107,5 +107,6 @@ AssetOrigin:
   productId: 202525
   packageName: 'UX Flat Icons [Free]'
   packageVersion: 2019.1.1
-  assetPath: Assets/sprites/HeathenEngineering-Icons/Free Flat Cart Icon.png
+  assetPath: Assets/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat
+    Move In Icon.png
   uploadId: 451587
