@@ -6,7 +6,9 @@ public class overlayManager : MonoBehaviour
 {
     //the scripts
     [SerializeField] snap[] snapScripts;
-    
+    [SerializeField] int noiseSeed;
+
+
     void Start()
     {
         snapScripts = transform
@@ -35,11 +37,22 @@ public class overlayManager : MonoBehaviour
         }
         SpriteRenderer sp = transform.GetComponent<SpriteRenderer>();
         sp.sprite = nt.CreateSprite();
-        runSetOverlay();
+        //runSetOverlay();
+
+        //createOverlays();
+    }
+
+    public void initOverlays()
+    {
+
+        foreach (snap s in snapScripts)
+        {
+            s.setOverlay(name);
+        }
     }
 
 
-    
+
     public void setOverlay(string name)
     {
         foreach (snap s in snapScripts)
