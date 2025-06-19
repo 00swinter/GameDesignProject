@@ -19,6 +19,9 @@ public class camera : MonoBehaviour
 	[SerializeField] public GameObject pointsTextUiShop;
 	[SerializeField] public float gesamtPoints;
 
+    [SerializeField] public GameObject HouseScreen;
+    [SerializeField] public GameObject ShopScreen;
+
     [SerializeField] private GameObject selectedCityBlock;
     [SerializeField] private overlayManager selectedOverlayManager;
     [SerializeField] private cityBlockData selectedCityBlockData;
@@ -62,8 +65,9 @@ public class camera : MonoBehaviour
         {
             pm.overlayDefines = overlayDefines;
         }
+        ScreenToTP1();
 
-    }
+	}
 
     void Update()
     {
@@ -277,7 +281,14 @@ public class camera : MonoBehaviour
         {
             _draggedRotation = Quaternion.Euler(0f, 0f, _draggedRotation.eulerAngles.z - 60);
         }
-    }
+
+		//------- F to leave Cityblock View -------
+		if (Input.GetKeyDown(KeyCode.F))
+        {
+            deselectCityBlock();
+        }
+
+	}
 
     void overlayControllLogic()
     {
@@ -673,4 +684,72 @@ public class camera : MonoBehaviour
         // returns true if the point overlaps the tray’s BoxCollider2D
         return Physics2D.OverlapPoint(wp, trayLayerMask) != null;
     }
+
+    public void ScreenToTP1()
+    {
+        GameObject TP1 = GameObject.FindGameObjectWithTag("Theaterplatz 1");
+        GameObject child = TP1.transform.Find("SpriteAndCollider").gameObject;
+		SelectObject(child);
+        HouseScreen.SetActive(false);
+        ShopScreen.SetActive(false);
+    }
+	public void ScreenToTP7()
+	{
+		GameObject TP7 = GameObject.FindGameObjectWithTag("Theaterplatz 7");
+		GameObject child = TP7.transform.Find("SpriteAndCollider").gameObject;
+		SelectObject(child);
+		HouseScreen.SetActive(false);
+		ShopScreen.SetActive(false);
+	}
+	public void ScreenToSM2()
+	{
+		GameObject SM2 = GameObject.FindGameObjectWithTag("Salzmarkt 2");
+		GameObject child = SM2.transform.Find("SpriteAndCollider").gameObject;
+		SelectObject(child);
+		HouseScreen.SetActive(false);
+		ShopScreen.SetActive(false);
+	}
+	public void ScreenToSM4()
+	{
+		GameObject SM4 = GameObject.FindGameObjectWithTag("Salzmarkt 4");
+		GameObject child = SM4.transform.Find("SpriteAndCollider").gameObject;
+		SelectObject(child);
+		HouseScreen.SetActive(false);
+		ShopScreen.SetActive(false);
+	}
+	public void ScreenToKJG5()
+	{
+		GameObject KJG5 = GameObject.FindGameObjectWithTag("Johannisgasse 5");
+		GameObject child = KJG5.transform.Find("SpriteAndCollider").gameObject;
+		SelectObject(child);
+		HouseScreen.SetActive(false);
+		ShopScreen.SetActive(false);
+	}
+
+	public void ScreenToKJG6()
+	{
+		GameObject KJG6 = GameObject.FindGameObjectWithTag("Johannisgasse 6");
+		GameObject child = KJG6.transform.Find("SpriteAndCollider").gameObject;
+		SelectObject(child);
+		HouseScreen.SetActive(false);
+		ShopScreen.SetActive(false);
+	}
+
+	public void ScreenToSG24()
+	{
+		GameObject SG24 = GameObject.FindGameObjectWithTag("Spitalgasse 24");
+		GameObject child = SG24.transform.Find("SpriteAndCollider").gameObject;
+		SelectObject(child);
+		HouseScreen.SetActive(false);
+		ShopScreen.SetActive(false);
+	}
+
+	public void ScreenToKJG8()
+	{
+		GameObject KJG8 = GameObject.FindGameObjectWithTag("Johannisgasse 8");
+		GameObject child = KJG8.transform.Find("SpriteAndCollider").gameObject;
+		SelectObject(child);
+		HouseScreen.SetActive(false);
+		ShopScreen.SetActive(false);
+	}
 }

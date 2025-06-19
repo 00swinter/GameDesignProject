@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Theaterplatz 1
+  - Salzmarkt 4
+  - Salzmarkt 2
+  - Theaterplatz 7
+  - Johannisgasse 5
+  - Johannisgasse 6
+  - Spitalgasse 24
+  - Johannisgasse 8
   layers:
   - Default
   - TransparentFX

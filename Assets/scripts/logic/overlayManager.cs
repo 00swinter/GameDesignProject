@@ -1,7 +1,10 @@
-using UnityEngine;
-using System.Linq;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class overlayManager : MonoBehaviour
 {
@@ -12,6 +15,9 @@ public class overlayManager : MonoBehaviour
     [SerializeField] public int gameSeed;
 
     [SerializeField] public OverlayDefine[] overlayDefines;
+    [SerializeField] public GameObject shopUnlockButton;
+    [SerializeField] public GameObject shopPanel;
+    [SerializeField] public GameObject housePanel;
 
 
     [Header("Grid Settings")]
@@ -76,7 +82,12 @@ public class overlayManager : MonoBehaviour
             cbd.isUnlocked = true;
             //change sprite
             setOverlay("none");
-        }
+            shopPanel.SetActive(false);
+            shopUnlockButton.GetComponentInChildren<TextMeshProUGUI>().text = "Unlocked";
+            shopUnlockButton.GetComponent<UnityEngine.UI.Button>().interactable = false;
+            housePanel.SetActive(true);
+
+		}
     }
 
 }
