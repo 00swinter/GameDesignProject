@@ -687,7 +687,8 @@ public class camera : MonoBehaviour
 
     public void ScreenToTP1()
     {
-        GameObject TP1 = GameObject.FindGameObjectWithTag("Theaterplatz 1");
+		deselectCityBlock();
+		GameObject TP1 = GameObject.FindGameObjectWithTag("Theaterplatz 1");
         GameObject child = TP1.transform.Find("SpriteAndCollider").gameObject;
 		SelectObject(child);
         HouseScreen.SetActive(false);
@@ -695,7 +696,8 @@ public class camera : MonoBehaviour
     }
 	public void ScreenToTP7()
 	{
-		GameObject TP7 = GameObject.FindGameObjectWithTag("Theaterplatz 7");
+		deselectCityBlock(); 
+        GameObject TP7 = GameObject.FindGameObjectWithTag("Theaterplatz 7");
 		GameObject child = TP7.transform.Find("SpriteAndCollider").gameObject;
 		SelectObject(child);
 		HouseScreen.SetActive(false);
@@ -703,7 +705,8 @@ public class camera : MonoBehaviour
 	}
 	public void ScreenToSM2()
 	{
-		GameObject SM2 = GameObject.FindGameObjectWithTag("Salzmarkt 2");
+		deselectCityBlock(); 
+        GameObject SM2 = GameObject.FindGameObjectWithTag("Salzmarkt 2");
 		GameObject child = SM2.transform.Find("SpriteAndCollider").gameObject;
 		SelectObject(child);
 		HouseScreen.SetActive(false);
@@ -711,7 +714,8 @@ public class camera : MonoBehaviour
 	}
 	public void ScreenToSM4()
 	{
-		GameObject SM4 = GameObject.FindGameObjectWithTag("Salzmarkt 4");
+		deselectCityBlock(); 
+        GameObject SM4 = GameObject.FindGameObjectWithTag("Salzmarkt 4");
 		GameObject child = SM4.transform.Find("SpriteAndCollider").gameObject;
 		SelectObject(child);
 		HouseScreen.SetActive(false);
@@ -719,7 +723,8 @@ public class camera : MonoBehaviour
 	}
 	public void ScreenToKJG5()
 	{
-		GameObject KJG5 = GameObject.FindGameObjectWithTag("Johannisgasse 5");
+		deselectCityBlock(); 
+        GameObject KJG5 = GameObject.FindGameObjectWithTag("Johannisgasse 5");
 		GameObject child = KJG5.transform.Find("SpriteAndCollider").gameObject;
 		SelectObject(child);
 		HouseScreen.SetActive(false);
@@ -728,7 +733,8 @@ public class camera : MonoBehaviour
 
 	public void ScreenToKJG6()
 	{
-		GameObject KJG6 = GameObject.FindGameObjectWithTag("Johannisgasse 6");
+		deselectCityBlock(); 
+        GameObject KJG6 = GameObject.FindGameObjectWithTag("Johannisgasse 6");
 		GameObject child = KJG6.transform.Find("SpriteAndCollider").gameObject;
 		SelectObject(child);
 		HouseScreen.SetActive(false);
@@ -737,7 +743,8 @@ public class camera : MonoBehaviour
 
 	public void ScreenToSG24()
 	{
-		GameObject SG24 = GameObject.FindGameObjectWithTag("Spitalgasse 24");
+		deselectCityBlock(); 
+        GameObject SG24 = GameObject.FindGameObjectWithTag("Spitalgasse 24");
 		GameObject child = SG24.transform.Find("SpriteAndCollider").gameObject;
 		SelectObject(child);
 		HouseScreen.SetActive(false);
@@ -746,7 +753,8 @@ public class camera : MonoBehaviour
 
 	public void ScreenToKJG8()
 	{
-		GameObject KJG8 = GameObject.FindGameObjectWithTag("Johannisgasse 8");
+		deselectCityBlock(); 
+        GameObject KJG8 = GameObject.FindGameObjectWithTag("Johannisgasse 8");
 		GameObject child = KJG8.transform.Find("SpriteAndCollider").gameObject;
 		SelectObject(child);
 		HouseScreen.SetActive(false);
