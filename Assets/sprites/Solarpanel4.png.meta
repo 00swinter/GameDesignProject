@@ -103,10 +103,10 @@ TextureImporter:
       name: Solarpanel4_0
       rect:
         serializedVersion: 2
-        x: 538
-        y: 220
-        width: 2450
-        height: 2121
+        x: 508
+        y: 194
+        width: 2492
+        height: 2182
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4c8991f245e658b458fb5a350eaaf9ad
     internalID: 0
     vertices: []
     indices: 

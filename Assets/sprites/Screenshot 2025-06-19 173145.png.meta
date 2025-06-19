@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 720e8f6925e2ef9438463388f086c93f
+guid: ed36bcd6aaaf10e4cae516c0c5e03c3a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5118421410828769773
-    second: Solarpanel5_0
+      213: 7297787322311131201
+    second: Screenshot 2025-06-19 173145_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Solarpanel5_0
+      name: Screenshot 2025-06-19 173145_0
       rect:
         serializedVersion: 2
-        x: 505
-        y: 179
-        width: 2507
-        height: 2206
+        x: 0
+        y: 0
+        width: 501
+        height: 229
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: de9d3339729480740800000000000000
-      internalID: 5118421410828769773
+      spriteID: 14044b087e2f64560800000000000000
+      internalID: 7297787322311131201
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c914b816dc2096f4cb682ec3424aa4b8
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Solarpanel5_0: 5118421410828769773
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

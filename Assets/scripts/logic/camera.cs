@@ -15,7 +15,9 @@ public class camera : MonoBehaviour
     [SerializeField] private LayerMask trayLayerMask;
 
     [SerializeField] public GameObject pointsTextUi;
-    [SerializeField] public float gesamtPoints;
+	[SerializeField] public GameObject pointsTextUiHouse;
+	[SerializeField] public GameObject pointsTextUiShop;
+	[SerializeField] public float gesamtPoints;
 
     [SerializeField] private GameObject selectedCityBlock;
     [SerializeField] private overlayManager selectedOverlayManager;
@@ -587,7 +589,7 @@ public class camera : MonoBehaviour
         selectedCityBlockData.points = punkte;
 
         // update points ui
-        pointsTextUi.GetComponent<TextMeshProUGUI>().text = Mathf.CeilToInt(punkte).ToString() + " Punkte in diesem Block";
+        pointsTextUi.GetComponent<TextMeshProUGUI>().text = Mathf.CeilToInt(punkte).ToString() + " Points in this block";
 
     }
 
@@ -658,10 +660,12 @@ public class camera : MonoBehaviour
             points += cbd.points;
         }
         gesamtPoints = points;
-        pointsTextUi.GetComponent<TextMeshProUGUI>().text = Mathf.CeilToInt(points).ToString() + " Punkte Gesamt";
+        pointsTextUi.GetComponent<TextMeshProUGUI>().text = Mathf.CeilToInt(points).ToString() + " Points Total";
+		pointsTextUiHouse.GetComponent<TextMeshProUGUI>().text = Mathf.CeilToInt(points).ToString() + " Points";
+		pointsTextUiShop.GetComponent<TextMeshProUGUI>().text = Mathf.CeilToInt(points).ToString() + " Points";
 
-        
-    }
+
+	}
 
     private bool IsPointerOverTray()
     {
