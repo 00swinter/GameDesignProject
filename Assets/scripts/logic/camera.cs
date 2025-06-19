@@ -41,8 +41,10 @@ public class camera : MonoBehaviour
     private Vector3 _offset;
     private Vector3 _startPos;
     private Quaternion _startRot;
+    
+    private menuInteractions uiscript;
 
-    [SerializeField] private GameObject snapTo = null;
+	[SerializeField] private GameObject snapTo = null;
     [SerializeField] private Vector3 cursorPosition = Vector3.zero;
 
 
@@ -50,7 +52,9 @@ public class camera : MonoBehaviour
     {
         _cam = this.gameObject.GetComponent<Camera>();
 
-        UnityEngine.Random.InitState(gameSeed);
+        uiscript = GameObject.FindGameObjectWithTag("UI Manager").GetComponent<menuInteractions>();
+
+		UnityEngine.Random.InitState(gameSeed);
 
         //find all OverlayManager
         overlayManager[] allOverlayManager = FindObjectsByType<overlayManager>(FindObjectsSortMode.None);
@@ -691,10 +695,12 @@ public class camera : MonoBehaviour
 		GameObject TP1 = GameObject.FindGameObjectWithTag("Theaterplatz 1");
         GameObject child = TP1.transform.Find("SpriteAndCollider").gameObject;
 		SelectObject(child);
-		allowControl = false;
-		HouseScreen.SetActive(false);
-        ShopScreen.SetActive(false);
-    }
+        allowControl = false;
+		if (uiscript.isHouses)
+			uiscript.ToggleHouseMenu();
+		if (uiscript.isShop)
+			uiscript.ToggleShopMenu();
+	}
 	public void ScreenToTP7()
 	{
 		deselectCityBlock(); 
@@ -702,8 +708,10 @@ public class camera : MonoBehaviour
 		GameObject child = TP7.transform.Find("SpriteAndCollider").gameObject;
 		SelectObject(child);
 		allowControl = false;
-		HouseScreen.SetActive(false);
-		ShopScreen.SetActive(false);
+		if (uiscript.isHouses)
+			uiscript.ToggleHouseMenu();
+		if (uiscript.isShop)
+			uiscript.ToggleShopMenu();
 	}
 	public void ScreenToSM2()
 	{
@@ -712,8 +720,10 @@ public class camera : MonoBehaviour
 		GameObject child = SM2.transform.Find("SpriteAndCollider").gameObject;
 		SelectObject(child);
 		allowControl = false;
-		HouseScreen.SetActive(false);
-		ShopScreen.SetActive(false);
+		if (uiscript.isHouses)
+			uiscript.ToggleHouseMenu();
+		if (uiscript.isShop)
+			uiscript.ToggleShopMenu();
 	}
 	public void ScreenToSM4()
 	{
@@ -722,8 +732,10 @@ public class camera : MonoBehaviour
 		GameObject child = SM4.transform.Find("SpriteAndCollider").gameObject;
 		SelectObject(child);
 		allowControl = false;
-		HouseScreen.SetActive(false);
-		ShopScreen.SetActive(false);
+		if (uiscript.isHouses)
+			uiscript.ToggleHouseMenu();
+		if (uiscript.isShop)
+			uiscript.ToggleShopMenu();
 	}
 	public void ScreenToKJG5()
 	{
@@ -732,8 +744,10 @@ public class camera : MonoBehaviour
 		GameObject child = KJG5.transform.Find("SpriteAndCollider").gameObject;
 		SelectObject(child);
         allowControl = false;
-		HouseScreen.SetActive(false);
-		ShopScreen.SetActive(false);
+		if(uiscript.isHouses)
+            uiscript.ToggleHouseMenu();
+        if(uiscript.isShop)
+    		uiscript.ToggleShopMenu();
 	}
 
 	public void ScreenToKJG6()
@@ -743,8 +757,10 @@ public class camera : MonoBehaviour
 		GameObject child = KJG6.transform.Find("SpriteAndCollider").gameObject;
 		SelectObject(child);
 		allowControl = false;
-		HouseScreen.SetActive(false);
-		ShopScreen.SetActive(false);
+		if (uiscript.isHouses)
+			uiscript.ToggleHouseMenu();
+		if (uiscript.isShop)
+			uiscript.ToggleShopMenu();
 	}
 
 	public void ScreenToSG24()
@@ -753,8 +769,11 @@ public class camera : MonoBehaviour
         GameObject SG24 = GameObject.FindGameObjectWithTag("Spitalgasse 24");
 		GameObject child = SG24.transform.Find("SpriteAndCollider").gameObject;
 		SelectObject(child);
-		HouseScreen.SetActive(false);
-		ShopScreen.SetActive(false);
+		allowControl = false;
+		if (uiscript.isHouses)
+			uiscript.ToggleHouseMenu();
+		if (uiscript.isShop)
+			uiscript.ToggleShopMenu();
 	}
 
 	public void ScreenToKJG8()
@@ -763,7 +782,10 @@ public class camera : MonoBehaviour
         GameObject KJG8 = GameObject.FindGameObjectWithTag("Johannisgasse 8");
 		GameObject child = KJG8.transform.Find("SpriteAndCollider").gameObject;
 		SelectObject(child);
-		HouseScreen.SetActive(false);
-		ShopScreen.SetActive(false);
+		allowControl = false;
+		if (uiscript.isHouses)
+			uiscript.ToggleHouseMenu();
+		if (uiscript.isShop)
+			uiscript.ToggleShopMenu();
 	}
 }

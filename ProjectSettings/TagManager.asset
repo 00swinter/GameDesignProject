@@ -12,6 +12,7 @@ TagManager:
   - Johannisgasse 6
   - Spitalgasse 24
   - Johannisgasse 8
+  - UI Manager
   layers:
   - Default
   - TransparentFX

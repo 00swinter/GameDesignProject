@@ -12,12 +12,12 @@ public class menuInteractions : MonoBehaviour
 	public GameObject housePanel;
 	public GameObject creditPanel;
 	public int gameSceneIndex = 1;
-	private bool isPaused = false;
-	private bool isEnergy = false;
-	private bool isShop = false;
-	private bool isHelp = false;
-	private bool isHouses = false;
-	private bool isCredit = false;
+	public bool isPaused = false;
+	public bool isEnergy = false;
+	public bool isShop = false;
+	public bool isHelp = true;
+	public bool isHouses = false;
+	public bool isCredit = false;
 void Start()
     {
         
