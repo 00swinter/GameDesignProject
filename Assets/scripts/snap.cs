@@ -3,9 +3,10 @@ using System.Collections.Generic;
 
 public class snap : MonoBehaviour
 {
-    [SerializeField] public Dictionary<string, OverlayData> overlayMap;
+    public Dictionary<string, OverlayData> overlayMap = new Dictionary<string, OverlayData>();
     [SerializeField] public int x;
     [SerializeField] public int y;
+
 
 
 
@@ -14,40 +15,21 @@ public class snap : MonoBehaviour
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         overlaySprite = transform.Find("Overlay").GetComponent<SpriteRenderer>();
+        
 
         string snapName = gameObject.name;
         string[] snapNameSplit = snapName.Split("_");
         x = int.Parse(snapNameSplit[1]);
         y = int.Parse(snapNameSplit[2]);
-
-        overlayMap = new Dictionary<string, OverlayData>();
-
-        /*overlays = new overlayData[2];
-
-        overlays[0] = new overlayData
-        {
-            overlayName = "Green",
-            value = 0.5f,
-            color = new Color(0f, 1f, 0f, 0.5f)
-        };
-
-        overlays[1] = new overlayData
-        {
-            overlayName = "Red",
-            value = 1,
-            color = new Color(1f, 0f, 0f, 0.5f)
-        };*/
     }
 
 
     public void setOverlay(string name)
     {
-        Debug.Log("setting " + name);
-
-        if(!overlayMap.ContainsKey(name))
+        if (!overlayMap.ContainsKey(name))
         {
             overlaySprite.color = new Color(1f, 1f, 1f, 0f);
         }
@@ -56,12 +38,11 @@ public class snap : MonoBehaviour
             Color c = overlayMap[name].color;
             Color w = Color.white;
             Color n = Color.Lerp(w, c, overlayMap[name].value);
-            overlaySprite.color = new Color(n.r, n.g, n.b, 1f);
-            Debug.Log(overlayMap[name].value);
+            overlaySprite.color = new Color(n.r, n.g, n.b, 0.5f);
         }
     }
 
-    public void initOverlay(OverlayData data)
+    public void createOverlay(OverlayData data)
     {
         overlayMap.Add(data.overlayName, data);
     }

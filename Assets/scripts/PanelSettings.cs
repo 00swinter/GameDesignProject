@@ -1,16 +1,45 @@
+using NUnit.Framework.Constraints;
 using UnityEngine;
 
 public class PanelSettings : MonoBehaviour
 {
-    [SerializeField] public Vector3 cameraCenter;
-    [SerializeField] public float cameraSpeed = 30;
-    [SerializeField] public float cameraZoom = 15;
-    [SerializeField] public float cameraZoomSpeed = 5;
-    [SerializeField] public float limit_ZoomIn = 4;
-    [SerializeField] public float limit_ZoomOut = 25;
-    [SerializeField] public float relativeRotation = 0;
-    [SerializeField] public float limit_Left = -100;
-    [SerializeField] public float limit_Right = 100;
-    [SerializeField] public float limit_Top = 50;
-    [SerializeField] public float limit_Down = -50;
+    [SerializeField] public string ptype; //(same as the overlay Name)
+    [SerializeField] public Color color;
+
+    [SerializeField] public Sprite sprite;
+    void Start()
+    {
+        SpriteRenderer sr = transform.GetComponent<SpriteRenderer>();
+        if (sprite != null)
+        {
+            sr.sprite = sprite;
+        }
+        else
+        {
+            sr.color = color;
+        }
+        /*
+        switch (ptype)
+        {//"red", "blue", "green", "yellow", "purple", "orange"
+            case "red":
+                sr.color = Color.red;
+                break;
+            case "blue":
+                sr.color = Color.blue;
+                break;
+            case "green":
+                sr.color = Color.green;
+                break;
+            case "yellow":
+                sr.color = Color.yellow;
+                break;
+            case "purple":
+                sr.color = Color.purple;
+                break;
+            case "orange":
+                sr.color = Color.orange;
+                break;
+        }
+        */
+    }
 }

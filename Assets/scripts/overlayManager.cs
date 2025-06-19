@@ -1,58 +1,59 @@
 using UnityEngine;
 using System.Linq;
 using System;
+using System.Collections.Generic;
 
 public class overlayManager : MonoBehaviour
 {
     //the scripts
     [SerializeField] snap[] snapScripts;
-    [SerializeField] int noiseSeed;
+    [SerializeField] public int gameSeed;
+
+    [SerializeField] public OverlayDefine[] overlayDefines;
+
+
+    [Header("Grid Settings")]
+    [SerializeField] public int gridSizeX;
+    [SerializeField] public int gridSizeY;
 
 
     void Start()
     {
+
+        //find all snapScripts in the cityblock
         snapScripts = transform
             .Find("HexGridRoot")
             .Cast<Transform>()
             .Select(t => t.GetComponent<snap>()).Where(c => c != null)
             .ToArray();
 
-        NoiseTexture nt = new NoiseTexture(2500, 2500, 50f, 2232);
-
-        foreach (snap s in snapScripts)
+        //create the noiseTexture in the overlay defines
+        for (int i = 0; i < overlayDefines.Length; i++)
         {
-            float x = s.x;
-            float y = s.y;
-            Debug.Log(x);
-            Debug.Log(y);
-            float steps = 5f;
-            float value = (1 - nt.SampleUV(x / 25, y / 15));
-
-            float roundedValue = Mathf.Round(value * steps) / steps;
-
-            float clampedValue = (roundedValue >= 0.6f ? roundedValue : 0f);
-
-            OverlayData data = new OverlayData("test", clampedValue, Color.green);;
-            s.initOverlay(data);
+            var od = overlayDefines[i];
+            od.nt = new NoiseTexture(gridSizeX * 2, gridSizeY * 2, 5f, gameSeed + (UnityEngine.Random.Range(0, 1000)));
+            overlayDefines[i] = od;
         }
-        SpriteRenderer sp = transform.GetComponent<SpriteRenderer>();
-        sp.sprite = nt.CreateSprite();
-        //runSetOverlay();
 
-        //createOverlays();
-    }
+        //init the snapping point values
 
-    public void initOverlays()
-    {
-
-        foreach (snap s in snapScripts)
+        foreach (OverlayDefine od in overlayDefines)
         {
-            s.setOverlay(name);
+            foreach (snap s in snapScripts)
+            {
+                float x = s.x;
+                float y = s.y;
+                float steps = 5f;
+                float value = 1 - od.nt.SampleUV(x / gridSizeX, y / gridSizeY);
+
+                float roundedValue = Mathf.Round(value * steps) / steps;
+
+                float clampedValue = (roundedValue >= 0.6f ? roundedValue : 0f);
+                OverlayData data = new OverlayData(od.name, clampedValue, od.color);
+                s.createOverlay(data);
+            }
         }
     }
-
-
-
     public void setOverlay(string name)
     {
         foreach (snap s in snapScripts)
@@ -60,10 +61,16 @@ public class overlayManager : MonoBehaviour
             s.setOverlay(name);
         }
     }
+}
 
-    [ContextMenu("run setOverlay")]
-    void runSetOverlay()
-    {
-        setOverlay("test");
-    }
+[System.Serializable]
+public struct OverlayDefine
+{
+    public NoiseTexture nt;
+    public int seedOffset;
+    public string name;
+    public Color color;
+    public int gridSizeX;
+    public int gridSizeY;
+    public Sprite panelSprite;
 }
