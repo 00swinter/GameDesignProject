@@ -691,7 +691,8 @@ public class camera : MonoBehaviour
 		GameObject TP1 = GameObject.FindGameObjectWithTag("Theaterplatz 1");
         GameObject child = TP1.transform.Find("SpriteAndCollider").gameObject;
 		SelectObject(child);
-        HouseScreen.SetActive(false);
+		allowControl = false;
+		HouseScreen.SetActive(false);
         ShopScreen.SetActive(false);
     }
 	public void ScreenToTP7()
@@ -700,6 +701,7 @@ public class camera : MonoBehaviour
         GameObject TP7 = GameObject.FindGameObjectWithTag("Theaterplatz 7");
 		GameObject child = TP7.transform.Find("SpriteAndCollider").gameObject;
 		SelectObject(child);
+		allowControl = false;
 		HouseScreen.SetActive(false);
 		ShopScreen.SetActive(false);
 	}
@@ -709,6 +711,7 @@ public class camera : MonoBehaviour
         GameObject SM2 = GameObject.FindGameObjectWithTag("Salzmarkt 2");
 		GameObject child = SM2.transform.Find("SpriteAndCollider").gameObject;
 		SelectObject(child);
+		allowControl = false;
 		HouseScreen.SetActive(false);
 		ShopScreen.SetActive(false);
 	}
@@ -718,6 +721,7 @@ public class camera : MonoBehaviour
         GameObject SM4 = GameObject.FindGameObjectWithTag("Salzmarkt 4");
 		GameObject child = SM4.transform.Find("SpriteAndCollider").gameObject;
 		SelectObject(child);
+		allowControl = false;
 		HouseScreen.SetActive(false);
 		ShopScreen.SetActive(false);
 	}
@@ -727,6 +731,7 @@ public class camera : MonoBehaviour
         GameObject KJG5 = GameObject.FindGameObjectWithTag("Johannisgasse 5");
 		GameObject child = KJG5.transform.Find("SpriteAndCollider").gameObject;
 		SelectObject(child);
+        allowControl = false;
 		HouseScreen.SetActive(false);
 		ShopScreen.SetActive(false);
 	}
@@ -737,6 +742,7 @@ public class camera : MonoBehaviour
         GameObject KJG6 = GameObject.FindGameObjectWithTag("Johannisgasse 6");
 		GameObject child = KJG6.transform.Find("SpriteAndCollider").gameObject;
 		SelectObject(child);
+		allowControl = false;
 		HouseScreen.SetActive(false);
 		ShopScreen.SetActive(false);
 	}
