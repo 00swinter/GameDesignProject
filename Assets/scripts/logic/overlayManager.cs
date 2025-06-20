@@ -77,7 +77,7 @@ public class overlayManager : MonoBehaviour
     public void UnlockCityBlock()
     {
         cityBlockData cbd = transform.GetComponent<cityBlockData>();
-        if (!cbd.isUnlocked && Camera.main.GetComponent<camera>().gesamtPoints >= buyThreshold)
+        if (!cbd.isUnlocked && Camera.main.GetComponent<camera>().gesamtPoints >= 0)
         {
             cbd.isUnlocked = true;
             //change sprite

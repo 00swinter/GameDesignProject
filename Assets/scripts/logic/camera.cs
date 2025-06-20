@@ -52,7 +52,9 @@ public class camera : MonoBehaviour
     {
         _cam = this.gameObject.GetComponent<Camera>();
 
-        uiscript = GameObject.FindGameObjectWithTag("UI Manager").GetComponent<menuInteractions>();
+        gameSeed = (int)UnityEngine.Random.Range(500000, 1000000);
+
+		uiscript = GameObject.FindGameObjectWithTag("UI Manager").GetComponent<menuInteractions>();
 
 		UnityEngine.Random.InitState(gameSeed);
 
@@ -316,9 +318,12 @@ public class camera : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
+            return;
+            /*
             string overlayName = selectedOverlayManager.overlayDefines[2].name;
             selectedOverlayManager.setOverlay(overlayName);
             selectedCityBlockData.lastUsedOverlay = overlayName;
+            */
         }
     }
 
