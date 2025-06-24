@@ -51915,7 +51915,7 @@ PrefabInstance:
     - target: {fileID: 7678464532383201997, guid: aee082c2a78f79b4499c91ea44a53909, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 454927479}
+      objectReference: {fileID: 1687779388}
     - target: {fileID: 7678464532383201997, guid: aee082c2a78f79b4499c91ea44a53909, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UnlockCityBlock
@@ -90176,7 +90176,7 @@ PrefabInstance:
     - target: {fileID: 7678464532383201997, guid: aee082c2a78f79b4499c91ea44a53909, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 454927479}
+      objectReference: {fileID: 1145621353}
     - target: {fileID: 7678464532383201997, guid: aee082c2a78f79b4499c91ea44a53909, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UnlockCityBlock
@@ -104419,7 +104419,7 @@ PrefabInstance:
     - target: {fileID: 7678464532383201997, guid: aee082c2a78f79b4499c91ea44a53909, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 454927479}
+      objectReference: {fileID: 374142070}
     - target: {fileID: 7678464532383201997, guid: aee082c2a78f79b4499c91ea44a53909, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UnlockCityBlock
@@ -111871,6 +111871,12 @@ MonoBehaviour:
   housePanel: {fileID: 2823996386498804566}
   creditPanel: {fileID: 0}
   gameSceneIndex: 1
+  isPaused: 0
+  isEnergy: 0
+  isShop: 0
+  isHelp: 1
+  isHouses: 0
+  isCredit: 0
 --- !u!224 &2030448718
 RectTransform:
   m_ObjectHideFlags: 0
@@ -114383,16 +114389,10 @@ MonoBehaviour:
     panelSprite: {fileID: 5118421410828769773, guid: 720e8f6925e2ef9438463388f086c93f, type: 3}
   - seedOffset: 0
     name: green
-    color: {r: 0, g: 1, b: 0.14901972, a: 1}
+    color: {r: 0, g: 1, b: 0.107948065, a: 1}
     gridSizeX: 0
     gridSizeY: 0
     panelSprite: {fileID: 8559821722937876757, guid: dd1d24e191ea70e408b22d3f07fdee1b, type: 3}
-  - seedOffset: 0
-    name: blue
-    color: {r: 0, g: 0.04620838, b: 1, a: 1}
-    gridSizeX: 0
-    gridSizeY: 0
-    panelSprite: {fileID: -8485715939999437845, guid: a30dc29e14ca379458b105d2bc7d1d8a, type: 3}
   - seedOffset: 0
     name: normal
     color: {r: 1, g: 1, b: 1, a: 1}
@@ -118814,7 +118814,7 @@ PrefabInstance:
     - target: {fileID: 7678464532383201997, guid: aee082c2a78f79b4499c91ea44a53909, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 454927479}
+      objectReference: {fileID: 2076599163}
     - target: {fileID: 7678464532383201997, guid: aee082c2a78f79b4499c91ea44a53909, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UnlockCityBlock
