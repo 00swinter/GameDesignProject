@@ -1,20 +1,13 @@
 fileFormatVersion: 2
-guid: 7ed4c93d3afd02545b55f22fda5c1a6b
-AssetOrigin:
-  serializedVersion: 1
-  productId: 235559
-  packageName: Violet Themed UI
-  packageVersion: 1.1
-  assetPath: Assets/Violet Theme Ui/White Icons/White Information.png
-  uploadId: 700144
+guid: baac06955bada5f41ac6f41b5dede9ae
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7953071339175753470
-    second: White Information_0
+      213: 2770200862893038436
+    second: MouseWheel3_0
   - first:
-      213: -4420400627663426183
-    second: White Information_1
+      213: -7535821399997383884
+    second: MouseWheel3_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,40 +99,49 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: White Information_1
+      name: MouseWheel3_0
       rect:
         serializedVersion: 2
-        x: 169
+        x: 0
         y: 0
-        width: 174
-        height: 512
+        width: 716
+        height: 532
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 97d2537ac0597a2c0800000000000000
-      internalID: -4420400627663426183
+      spriteID: 46b5835f10bb17620800000000000000
+      internalID: 2770200862893038436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MouseWheel3_1
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 13
+        width: 235
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43b7e5afc526b6790800000000000000
+      internalID: -7535821399997383884
       vertices: []
       indices: 
       edges: []
@@ -148,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 80a9b1b989f190a4bb7be7a74d5264ec
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -157,9 +159,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      White Information_0: -7953071339175753470
-      White Information_1: -4420400627663426183
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,20 +1,16 @@
 fileFormatVersion: 2
-guid: 7ed4c93d3afd02545b55f22fda5c1a6b
-AssetOrigin:
-  serializedVersion: 1
-  productId: 235559
-  packageName: Violet Themed UI
-  packageVersion: 1.1
-  assetPath: Assets/Violet Theme Ui/White Icons/White Information.png
-  uploadId: 700144
+guid: 4689e1f7eee1e20469cac7aa92e3c5ee
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7953071339175753470
-    second: White Information_0
+      213: 7531950853526361059
+    second: keyiconsQE_0
   - first:
-      213: -4420400627663426183
-    second: White Information_1
+      213: -8250533180134412337
+    second: keyiconsQE_1
+  - first:
+      213: -3818156664268426288
+    second: keyiconsQE_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,30 +102,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: White Information_1
+      name: keyiconsQE_0
       rect:
         serializedVersion: 2
-        x: 169
-        y: 0
-        width: 174
-        height: 512
+        x: 20
+        y: 375
+        width: 329
+        height: 330
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,8 +121,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 97d2537ac0597a2c0800000000000000
-      internalID: -4420400627663426183
+      spriteID: 3e39322356dd68860800000000000000
+      internalID: 7531950853526361059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyiconsQE_1
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 375
+        width: 330
+        height: 330
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcfa38e29c7308d80800000000000000
+      internalID: -8250533180134412337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyiconsQE_2
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 375
+        width: 329
+        height: 330
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d37d794ebe230bc0800000000000000
+      internalID: -3818156664268426288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: keyiconsQE_3
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 374
+        width: 1038
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f273d13b4c667242a8c8fb7700905f5
+      internalID: -1395553078
       vertices: []
       indices: 
       edges: []
@@ -148,7 +197,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 80a9b1b989f190a4bb7be7a74d5264ec
+    spriteID: 4603529ee6066274ebe684819a292aad
     internalID: 0
     vertices: []
     indices: 
@@ -158,8 +207,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      White Information_0: -7953071339175753470
-      White Information_1: -4420400627663426183
+      keyiconsQE_3: -1395553078
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

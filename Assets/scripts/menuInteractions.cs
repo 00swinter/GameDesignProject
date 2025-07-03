@@ -11,17 +11,19 @@ public class menuInteractions : MonoBehaviour
 	public GameObject shopPanel;
 	public GameObject housePanel;
 	public GameObject creditPanel;
+	public GameObject howToPanel;
 	public int gameSceneIndex = 1;
 	public bool isPaused = false;
 	public bool isEnergy = false;
 	public bool isShop = false;
-	public bool isHelp = true;
+	public bool isHelp = false;
 	public bool isHouses = false;
 	public bool isCredit = false;
+	public bool isHowTo = true;
 void Start()
-    {
-        
-    }
+	{
+		
+	}
 
 	// Update is called once per frame
 	void Update()
@@ -38,6 +40,8 @@ void Start()
 				ToggleHouseMenu();
 			else if (isCredit)
 				ToggleCreditMenu();
+			else if (isHowTo)
+				ToggleHowToMenu();
 			else
 				TogglePauseMenu();
 		}
@@ -75,6 +79,12 @@ void Start()
 	{
 		isCredit = !isCredit;
 		creditPanel.SetActive(isCredit);
+	}
+
+	public void ToggleHowToMenu()
+	{
+		isHowTo = !isHowTo;
+		howToPanel.SetActive(isHowTo);
 	}
 	public void QuitGame()
 	{
