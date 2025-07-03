@@ -1,7 +1,8 @@
-﻿using UnityEngine;
-using System.Linq;
-using Unity.VisualScripting;
+﻿using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.Audio;
 
 public class camera : MonoBehaviour
 {
@@ -42,7 +43,13 @@ public class camera : MonoBehaviour
 	private Vector3 _offset;
 	private Vector3 _startPos;
 	private Quaternion _startRot;
-	
+
+	private AudioSource audiosource;
+	public AudioClip panelPlacingSound;
+	public AudioClip panelNoPlacingSound;
+	public AudioClip panelPickUpSound;
+	public AudioClip panelRotateSound;
+
 	private menuInteractions uiscript;
 
 	[SerializeField] private GameObject snapTo = null;
@@ -52,6 +59,7 @@ public class camera : MonoBehaviour
 	void Awake()
 	{
 		_cam = this.gameObject.GetComponent<Camera>();
+		audiosource = GetComponent<AudioSource>();
 
 		gameSeed = (int)UnityEngine.Random.Range(500000, 1000000);
 
@@ -124,6 +132,7 @@ public class camera : MonoBehaviour
 		if (Input.GetMouseButtonDown(0) && _dragged == null)
 		{
 			Vector2 wp = _cam.ScreenToWorldPoint(Input.mousePosition);
+			audiosource.PlayOneShot(panelPickUpSound);
 			//click another cityblock
 			// 2a) Raycast at that point, but only against blockLayerMask
 			//    - distance = 0 forces a “point check”
@@ -229,6 +238,7 @@ public class camera : MonoBehaviour
 			_dragged.GetComponent<PanelData>().isDragged = false;
 			if (snapTo == null)
 			{
+				audiosource.PlayOneShot(panelNoPlacingSound);
 				//to tray
 				_dragged.transform.SetParent(selectedCityBlockData.tray.transform);
 				_dragged.transform.rotation = _draggedRotation;
@@ -242,18 +252,19 @@ public class camera : MonoBehaviour
 				if (IsPointerOverTray())
 				{
 					//to tray
+					audiosource.PlayOneShot(panelNoPlacingSound);
 					_dragged.transform.SetParent(selectedCityBlockData.tray.transform);
 					_dragged.transform.rotation = _draggedRotation;
 				}
 				else
 				{
-
 					//to snap
 					_dragged.transform.position = new Vector3(snapTo.transform.position.x, snapTo.transform.position.y, -1);
 					_dragged.transform.rotation = snapTo.transform.rotation * _draggedRotation;
 
 					if (blockIsColliding())
 					{
+						audiosource.PlayOneShot(panelNoPlacingSound);
 						if (draggedWasOnGrid)
 						{
 							_dragged.transform.position = _startPos;
@@ -267,6 +278,7 @@ public class camera : MonoBehaviour
 					}
 					else
 					{
+						audiosource.PlayOneShot(panelPlacingSound);
 						_dragged.transform.SetParent(selectedCityBlockData.OnGrid.transform);
 					}
 
@@ -282,11 +294,13 @@ public class camera : MonoBehaviour
 		// -------Rotate block-------
 		if (Input.GetKeyDown(KeyCode.Q))
 		{
+			audiosource.PlayOneShot(panelRotateSound);
 			_draggedRotation = Quaternion.Euler(0f, 0f, _draggedRotation.eulerAngles.z + 60);
 		}
 
 		if (Input.GetKeyDown(KeyCode.E))
 		{
+			audiosource.PlayOneShot(panelRotateSound);
 			_draggedRotation = Quaternion.Euler(0f, 0f, _draggedRotation.eulerAngles.z - 60);
 		}
 
@@ -644,6 +658,7 @@ public class camera : MonoBehaviour
 
 	private void SelectObject(GameObject selected)
 	{
+		audiosource.Play();
 		GameObject sel = selected.transform.parent.gameObject;
 		cityBlockData cbd = sel.GetComponent<cityBlockData>();
 		if (!cbd.isUnlocked)
