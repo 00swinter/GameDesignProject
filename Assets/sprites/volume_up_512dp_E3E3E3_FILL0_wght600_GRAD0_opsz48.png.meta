@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 2cdc8c795aebb774cb90dd65c73a36e3
+guid: 2c6cfb3ec5b0334449dbbbaf906ba345
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1967949042355171916
-    second: keyiconsF2_0
+      213: -1591244508764211388
+    second: volume_up_512dp_E3E3E3_FILL0_wght600_GRAD0_opsz48_0
+  - first:
+      213: -4634418880462893934
+    second: volume_up_512dp_E3E3E3_FILL0_wght600_GRAD0_opsz48_1
+  - first:
+      213: 5841989460509915320
+    second: volume_up_512dp_E3E3E3_FILL0_wght600_GRAD0_opsz48_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +106,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: keyiconsF2_0
+      name: volume_up_512dp_E3E3E3_FILL0_wght600_GRAD0_opsz48_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 4
-        width: 1072
-        height: 1072
+        x: 53
+        y: 72
+        width: 406
+        height: 368
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4bd895ac5c070b4e0800000000000000
-      internalID: -1967949042355171916
+      spriteID: 4477150dc83cae9e0800000000000000
+      internalID: -1591244508764211388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volume_up_512dp_E3E3E3_FILL0_wght600_GRAD0_opsz48_1
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 168
+        width: 70
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29c45a9159c3fafb0800000000000000
+      internalID: -4634418880462893934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volume_up_512dp_E3E3E3_FILL0_wght600_GRAD0_opsz48_2
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 74
+        width: 150
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b8f44f467ae21150800000000000000
+      internalID: 5841989460509915320
       vertices: []
       indices: 
       edges: []
@@ -125,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 50d23a20748ab9641af4278c6e0c21f4
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      keyiconsF2_0: -1967949042355171916
+      volume_up_512dp_E3E3E3_FILL0_wght600_GRAD0_opsz48_0: -1591244508764211388
+      volume_up_512dp_E3E3E3_FILL0_wght600_GRAD0_opsz48_1: -4634418880462893934
+      volume_up_512dp_E3E3E3_FILL0_wght600_GRAD0_opsz48_2: 5841989460509915320
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

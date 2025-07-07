@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 2cdc8c795aebb774cb90dd65c73a36e3
+guid: 459df24c88eee1f4abd122c354ecc262
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1967949042355171916
-    second: keyiconsF2_0
+      213: 651017174364457833
+    second: no_sound_512dp_E3E3E3_FILL0_wght600_GRAD0_opsz48_0
+  - first:
+      213: 1143923349818875187
+    second: no_sound_512dp_E3E3E3_FILL0_wght600_GRAD0_opsz48_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: keyiconsF2_0
+      name: no_sound_512dp_E3E3E3_FILL0_wght600_GRAD0_opsz48_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 4
-        width: 1072
-        height: 1072
+        x: 48
+        y: 95
+        width: 429
+        height: 322
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4bd895ac5c070b4e0800000000000000
-      internalID: -1967949042355171916
+      spriteID: 96b0cacbba0e80900800000000000000
+      internalID: 651017174364457833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: no_sound_512dp_E3E3E3_FILL0_wght600_GRAD0_opsz48_1
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 172
+        width: 166
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33d9a34d93800ef00800000000000000
+      internalID: 1143923349818875187
       vertices: []
       indices: 
       edges: []
@@ -125,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c26d3b445909bdf40be4abe496233924
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      keyiconsF2_0: -1967949042355171916
+      no_sound_512dp_E3E3E3_FILL0_wght600_GRAD0_opsz48_0: 651017174364457833
+      no_sound_512dp_E3E3E3_FILL0_wght600_GRAD0_opsz48_1: 1143923349818875187
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

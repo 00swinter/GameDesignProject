@@ -112,10 +112,10 @@ TextureImporter:
       name: keyiconsDA2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1000
-        height: 674
+        x: 14
+        y: 189
+        width: 1050
+        height: 711
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,72 +126,6 @@ TextureImporter:
       bones: []
       spriteID: 9993340f93c04c2c0800000000000000
       internalID: -4412388291932636775
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keyiconsDA2_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 327
-        height: 327
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b8fec9b226d9afec0800000000000000
-      internalID: -3532337912754671733
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keyiconsDA2_2
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 0
-        width: 328
-        height: 327
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7cdd776ea2642a920800000000000000
-      internalID: 3000037451851357639
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: keyiconsDA2_3
-      rect:
-        serializedVersion: 2
-        x: 673
-        y: 0
-        width: 327
-        height: 327
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: aaa25fff4dc3892b0800000000000000
-      internalID: -5577641252973368662
       vertices: []
       indices: 
       edges: []
