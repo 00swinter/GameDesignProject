@@ -49,6 +49,7 @@ public class camera : MonoBehaviour
 	public AudioClip panelNoPlacingSound;
 	public AudioClip panelPickUpSound;
 	public AudioClip panelRotateSound;
+	public AudioClip backToTraySound;
 
 	private menuInteractions uiscript;
 
@@ -238,7 +239,7 @@ public class camera : MonoBehaviour
 			_dragged.GetComponent<PanelData>().isDragged = false;
 			if (snapTo == null)
 			{
-				audiosource.PlayOneShot(panelNoPlacingSound);
+				audiosource.PlayOneShot(backToTraySound);
 				//to tray
 				_dragged.transform.SetParent(selectedCityBlockData.tray.transform);
 				_dragged.transform.rotation = _draggedRotation;
@@ -252,7 +253,7 @@ public class camera : MonoBehaviour
 				if (IsPointerOverTray())
 				{
 					//to tray
-					audiosource.PlayOneShot(panelNoPlacingSound);
+					audiosource.PlayOneShot(backToTraySound);
 					_dragged.transform.SetParent(selectedCityBlockData.tray.transform);
 					_dragged.transform.rotation = _draggedRotation;
 				}
